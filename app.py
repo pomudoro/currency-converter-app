@@ -57,4 +57,11 @@ def test():
     '''
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Получаем порт из переменной окружения (для Railway)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    
+    # В продакшене отключаем debug
+    debug_mode = os.environ.get('ENVIRONMENT') != 'production'
+    
+    app.run(debug=debug_mode, host='0.0.0.0', port=port)
