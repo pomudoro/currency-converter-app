@@ -1,2 +1,5 @@
 pytest>=7.0.0
-flask>=2.3.0p
+flask>=2.3.0
+flake8>=6.0.0
+black>=23.0.0
+isort>=5.12.0
