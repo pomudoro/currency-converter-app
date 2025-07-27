@@ -15,7 +15,7 @@ jobs:
     
     strategy:
       matrix:
-        python-version: [3.9, 3.10, 3.11, 3.12]  # Тестируем разные версии Python
+        python-version: ["3.9", "3.10", "3.11", "3.12"]  # ✅ В кавычках!  # Тестируем разные версии Python
     
     steps:
     # Шаг 1: Скачать код из репозитория
@@ -79,7 +79,7 @@ jobs:
     - name: 🐍 Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
+        python-version: "3.11"
     
     - name: 📋 Install quality tools
       run: |
